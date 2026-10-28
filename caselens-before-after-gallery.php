@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       CaseLens Before and After Gallery
- * Plugin URI:        http://rodneylungayan.com/wordpress-plugins
+ * Plugin URI:        https://github.com/rodneylungayan/caselens-before-after-gallery
  * Description:       A filterable before and after case gallery. Adds a Gallery Cases post type with procedure categories, patient detail fields you define yourself, and a searchable front-end gallery with before/after photo pairs.
  * Version:           1.0.0
  * Requires at least: 6.2
  * Requires PHP:      7.4
  * Author:            Rodney Lungayan
- * Author URI:        http://rodneylungayan.com/wordpress-plugins
+ * Author URI:        https://rodneylungayan.com/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       caselens-before-after-gallery
