@@ -38,19 +38,30 @@ Numbered to match the `== Screenshots ==` list in `readme.txt`; the captions com
 
 If you reorder or reword that list, rename these to match — the directory pairs them by number alone.
 
+## Icon and banner
+
+| File | Size | Where it shows |
+|---|---|---|
+| `icon-256x256.png` | 256×256 | The plugin card, and search results |
+| `icon-128x128.png` | 128×128 | The smaller icon slot |
+| `banner-772x250.png` | 772×250 | The header on the plugin page |
+| `banner-1544x500.png` | 1544×500 | The same banner on retina screens |
+
+Both are derived from `logo-source.webp`, the stacked lockup. The icon is the mark on its own, centred with a tenth of the frame as padding on each side so it survives being masked into a rounded shape. The banners re-lay the artwork horizontally — mark on the left, wordmark and tagline beside it — because a stacked logo dropped into a 3:1 frame either shrinks to a thumbnail or crops.
+
 ## How they were produced
 
-Captured at 1280×960 from a WordPress Playground site running the plugin with sample content. The photos are generated placeholders, not real cases.
+The screenshots were captured at 1280 wide from a WordPress Playground site running the plugin with sample content. The photos in them are generated placeholders, not real cases.
 
 ```bash
-# from the test harness
-node shoot.mjs http://127.0.0.1:9450 ./.wordpress-org
+node shoot.mjs http://127.0.0.1:9450 ./.wordpress-org        # all six
+node shoot.mjs http://127.0.0.1:9450 ./.wordpress-org 1,3    # just those two
 ```
 
-## Still to add
+The icon and banners are composed from the logo. The script finds the mark, the wordmark and the tagline by scanning the artwork for bands of ink, so it keeps working if the logo is re-exported at another size.
 
-Optional but recommended for the directory listing:
+```bash
+node make-assets.mjs ./.wordpress-org/logo-source.webp ./.wordpress-org
+```
 
-- `icon-256x256.png` — the icon on search results and the plugin card
-- `banner-772x250.png` — the header on the plugin page
-- `banner-1544x500.png` — the same banner at 2x
+Both scripts need `puppeteer`.
