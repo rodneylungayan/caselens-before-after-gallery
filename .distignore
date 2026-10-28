@@ -4,6 +4,7 @@
 .gitignore
 .distignore
 .editorconfig
+.wordpress-org
 README.md
 node_modules
 vendor
