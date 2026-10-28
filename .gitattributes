@@ -1,0 +1,13 @@
+# Keep development files out of `git archive` exports (the release zip).
+/.gitignore     export-ignore
+/.gitattributes export-ignore
+/.distignore    export-ignore
+/.github        export-ignore
+/test-fixtures  export-ignore
+
+# Normalise line endings in the repository.
+* text=auto
+*.php text eol=lf
+*.js  text eol=lf
+*.css text eol=lf
+*.txt text eol=lf
