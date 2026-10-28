@@ -130,7 +130,7 @@ class CaseLens_SEO {
 
 		$title = sprintf(
 			/* translators: 1: procedure name, 2: site name. */
-			__( '%1$s Before and After Photos - %2$s', 'caselens-before-after-gallery' ),
+			__( '%1$s Before and After Photos - %2$s', 'caselens-before-and-after-gallery' ),
 			$name,
 			$site
 		);
@@ -139,7 +139,7 @@ class CaseLens_SEO {
 		if ( '' === $desc ) {
 			$desc = sprintf(
 				/* translators: %s: procedure name. */
-				__( 'See real before and after results for %s. Browse case photos and details.', 'caselens-before-after-gallery' ),
+				__( 'See real before and after results for %s. Browse case photos and details.', 'caselens-before-and-after-gallery' ),
 				$name
 			);
 		}

@@ -10,8 +10,7 @@
  * Author URI:        https://rodneylungayan.com/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       caselens-before-after-gallery
- * Domain Path:       /languages
+ * Text Domain:       caselens-before-and-after-gallery
  *
  * @package CaseLens
  */

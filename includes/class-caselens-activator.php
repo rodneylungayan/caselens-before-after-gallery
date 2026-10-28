@@ -77,7 +77,7 @@ class CaseLens_Activator {
 
 		$new_id = wp_insert_post(
 			array(
-				'post_title'   => __( 'Gallery', 'caselens-before-after-gallery' ),
+				'post_title'   => __( 'Gallery', 'caselens-before-and-after-gallery' ),
 				'post_name'    => $base,
 				'post_content' => '[caselens_gallery]',
 				'post_status'  => 'publish',

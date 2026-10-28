@@ -7,7 +7,7 @@ These files are for the plugin's page in the WordPress.org directory. They are *
 In the plugin's SVN repository they belong in the top-level `assets/` folder, which sits beside `trunk/` rather than inside it:
 
 ```
-caselens-before-after-gallery/
+caselens-before-and-after-gallery/
 ├── assets/      <- these files
 ├── trunk/       <- the plugin itself
 └── tags/
@@ -16,9 +16,9 @@ caselens-before-after-gallery/
 The folder is called `assets/` in SVN but `.wordpress-org/` here, because the plugin already has its own `assets/` folder for CSS and JavaScript.
 
 ```bash
-svn co https://plugins.svn.wordpress.org/caselens-before-after-gallery
-cp .wordpress-org/* caselens-before-after-gallery/assets/
-cd caselens-before-after-gallery
+svn co https://plugins.svn.wordpress.org/caselens-before-and-after-gallery
+cp .wordpress-org/* caselens-before-and-after-gallery/assets/
+cd caselens-before-and-after-gallery
 svn add assets/* --force
 svn ci -m "Add directory screenshots"
 ```

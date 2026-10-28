@@ -34,15 +34,15 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 	<h1 class="caselens-case-title"><?php echo esc_html( $heading ); ?></h1>
 
 	<?php if ( $previous || $next ) : ?>
-		<nav class="caselens-pager" aria-label="<?php esc_attr_e( 'Cases', 'caselens-before-after-gallery' ); ?>">
+		<nav class="caselens-pager" aria-label="<?php esc_attr_e( 'Cases', 'caselens-before-and-after-gallery' ); ?>">
 			<?php if ( $previous ) : ?>
 				<a class="caselens-btn" href="<?php echo esc_url( get_permalink( $previous ) ); ?>" rel="prev">
-					&laquo; <?php esc_html_e( 'Previous', 'caselens-before-after-gallery' ); ?>
+					&laquo; <?php esc_html_e( 'Previous', 'caselens-before-and-after-gallery' ); ?>
 				</a>
 			<?php endif; ?>
 			<?php if ( $next ) : ?>
 				<a class="caselens-btn" href="<?php echo esc_url( get_permalink( $next ) ); ?>" rel="next">
-					<?php esc_html_e( 'Next', 'caselens-before-after-gallery' ); ?> &raquo;
+					<?php esc_html_e( 'Next', 'caselens-before-and-after-gallery' ); ?> &raquo;
 				</a>
 			<?php endif; ?>
 		</nav>
@@ -52,7 +52,7 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 
 		<div class="caselens-case-photos">
 			<?php if ( empty( $photos ) ) : ?>
-				<p class="caselens-empty"><?php esc_html_e( 'No photos have been added to this case yet.', 'caselens-before-after-gallery' ); ?></p>
+				<p class="caselens-empty"><?php esc_html_e( 'No photos have been added to this case yet.', 'caselens-before-and-after-gallery' ); ?></p>
 			<?php else : ?>
 				<div class="caselens-slider" data-count="<?php echo esc_attr( count( $photos ) ); ?>">
 					<div class="caselens-slides">
@@ -60,8 +60,8 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 							<div class="caselens-slide" <?php if ( 0 !== $caselens_index ) : ?>hidden<?php endif; ?>>
 								<?php
 								$caselens_slots = array(
-									'before' => __( 'Before', 'caselens-before-after-gallery' ),
-									'after'  => __( 'After', 'caselens-before-after-gallery' ),
+									'before' => __( 'Before', 'caselens-before-and-after-gallery' ),
+									'after'  => __( 'After', 'caselens-before-and-after-gallery' ),
 								);
 								?>
 								<?php foreach ( $caselens_slots as $caselens_slot => $caselens_label ) : ?>
@@ -97,8 +97,8 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 					</div>
 
 					<?php if ( count( $photos ) > 1 ) : ?>
-						<button type="button" class="caselens-arrow caselens-prev" aria-label="<?php esc_attr_e( 'Previous photos', 'caselens-before-after-gallery' ); ?>" hidden>&#8249;</button>
-						<button type="button" class="caselens-arrow caselens-next" aria-label="<?php esc_attr_e( 'Next photos', 'caselens-before-after-gallery' ); ?>" hidden>&#8250;</button>
+						<button type="button" class="caselens-arrow caselens-prev" aria-label="<?php esc_attr_e( 'Previous photos', 'caselens-before-and-after-gallery' ); ?>" hidden>&#8249;</button>
+						<button type="button" class="caselens-arrow caselens-next" aria-label="<?php esc_attr_e( 'Next photos', 'caselens-before-and-after-gallery' ); ?>" hidden>&#8250;</button>
 						<p class="caselens-slider-count" aria-live="polite" hidden></p>
 					<?php endif; ?>
 				</div>
@@ -115,7 +115,7 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 
 		<aside class="caselens-case-meta">
 			<?php if ( ! empty( $terms ) ) : ?>
-				<h2 class="caselens-meta-title"><?php esc_html_e( 'Procedures', 'caselens-before-after-gallery' ); ?></h2>
+				<h2 class="caselens-meta-title"><?php esc_html_e( 'Procedures', 'caselens-before-and-after-gallery' ); ?></h2>
 				<ul class="caselens-term-list">
 					<?php foreach ( $terms as $caselens_term ) : ?>
 						<li>
@@ -128,7 +128,7 @@ $caselens_lightbox = ! empty( $settings['lightbox'] );
 			<?php endif; ?>
 
 			<?php if ( ! empty( $details ) ) : ?>
-				<h2 class="caselens-meta-title"><?php esc_html_e( 'Case Details', 'caselens-before-after-gallery' ); ?></h2>
+				<h2 class="caselens-meta-title"><?php esc_html_e( 'Case Details', 'caselens-before-and-after-gallery' ); ?></h2>
 				<?php foreach ( $details as $caselens_group => $caselens_rows ) : ?>
 					<?php if ( count( $details ) > 1 ) : ?>
 						<h3 class="caselens-meta-group"><?php echo esc_html( $caselens_group ); ?></h3>

@@ -33,7 +33,7 @@ class CaseLens_Meta_Box {
 	public function register() {
 		add_meta_box(
 			'caselens-photos',
-			__( 'Before and After Photos', 'caselens-before-after-gallery' ),
+			__( 'Before and After Photos', 'caselens-before-and-after-gallery' ),
 			array( $this, 'render_photos' ),
 			CASELENS_CPT,
 			'normal',
@@ -43,7 +43,7 @@ class CaseLens_Meta_Box {
 		if ( CaseLens_Fields::all() ) {
 			add_meta_box(
 				'caselens-details',
-				__( 'Case Details', 'caselens-before-after-gallery' ),
+				__( 'Case Details', 'caselens-before-and-after-gallery' ),
 				array( $this, 'render_details' ),
 				CASELENS_CPT,
 				'normal',
@@ -63,7 +63,7 @@ class CaseLens_Meta_Box {
 		$pairs = CaseLens_Case::pairs( $post->ID );
 		?>
 		<p class="description">
-			<?php esc_html_e( 'Each row is one before and after pair. The first row is used for the card in the gallery grid.', 'caselens-before-after-gallery' ); ?>
+			<?php esc_html_e( 'Each row is one before and after pair. The first row is used for the card in the gallery grid.', 'caselens-before-and-after-gallery' ); ?>
 		</p>
 
 		<div id="caselens-pairs" class="caselens-pairs">
@@ -74,7 +74,7 @@ class CaseLens_Meta_Box {
 
 		<p>
 			<button type="button" class="button" id="caselens-add-pair">
-				<?php esc_html_e( 'Add photo pair', 'caselens-before-after-gallery' ); ?>
+				<?php esc_html_e( 'Add photo pair', 'caselens-before-and-after-gallery' ); ?>
 			</button>
 		</p>
 
@@ -93,8 +93,8 @@ class CaseLens_Meta_Box {
 	 */
 	private function render_pair_row( $index, $pair ) {
 		$slots = array(
-			'before' => __( 'Before', 'caselens-before-after-gallery' ),
-			'after'  => __( 'After', 'caselens-before-after-gallery' ),
+			'before' => __( 'Before', 'caselens-before-and-after-gallery' ),
+			'after'  => __( 'After', 'caselens-before-and-after-gallery' ),
 		);
 		?>
 		<div class="caselens-pair">
@@ -111,7 +111,7 @@ class CaseLens_Meta_Box {
 						<?php if ( $url ) : ?>
 							<img src="<?php echo esc_url( $url ); ?>" alt="" />
 						<?php else : ?>
-							<span class="caselens-pick-text"><?php esc_html_e( 'Choose image', 'caselens-before-after-gallery' ); ?></span>
+							<span class="caselens-pick-text"><?php esc_html_e( 'Choose image', 'caselens-before-and-after-gallery' ); ?></span>
 						<?php endif; ?>
 					</button>
 					<input
@@ -120,23 +120,23 @@ class CaseLens_Meta_Box {
 						name="caselens_pairs[<?php echo esc_attr( $index ); ?>][<?php echo esc_attr( $slot ); ?>]"
 						value="<?php echo esc_attr( $id ); ?>" />
 					<button type="button" class="button-link caselens-clear"<?php echo $url ? '' : ' hidden'; ?>>
-						<?php esc_html_e( 'Remove', 'caselens-before-after-gallery' ); ?>
+						<?php esc_html_e( 'Remove', 'caselens-before-and-after-gallery' ); ?>
 					</button>
 				</div>
 			<?php endforeach; ?>
 
 			<div class="caselens-pair-meta">
 				<label>
-					<span class="screen-reader-text"><?php esc_html_e( 'Caption', 'caselens-before-after-gallery' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Caption', 'caselens-before-and-after-gallery' ); ?></span>
 					<input
 						type="text"
 						class="widefat"
-						placeholder="<?php esc_attr_e( 'Caption (optional)', 'caselens-before-after-gallery' ); ?>"
+						placeholder="<?php esc_attr_e( 'Caption (optional)', 'caselens-before-and-after-gallery' ); ?>"
 						name="caselens_pairs[<?php echo esc_attr( $index ); ?>][caption]"
 						value="<?php echo esc_attr( isset( $pair['caption'] ) ? $pair['caption'] : '' ); ?>" />
 				</label>
 				<button type="button" class="button-link delete caselens-remove-pair">
-					<?php esc_html_e( 'Delete row', 'caselens-before-after-gallery' ); ?>
+					<?php esc_html_e( 'Delete row', 'caselens-before-and-after-gallery' ); ?>
 				</button>
 			</div>
 		</div>
@@ -170,7 +170,7 @@ class CaseLens_Meta_Box {
 							<td>
 								<?php if ( 'select' === $field['type'] ) : ?>
 									<select id="<?php echo esc_attr( $input ); ?>" name="<?php echo esc_attr( $name ); ?>">
-										<option value=""><?php esc_html_e( '— Not set —', 'caselens-before-after-gallery' ); ?></option>
+										<option value=""><?php esc_html_e( '— Not set —', 'caselens-before-and-after-gallery' ); ?></option>
 										<?php foreach ( $field['choices'] as $choice_value => $choice_label ) : ?>
 											<option value="<?php echo esc_attr( $choice_value ); ?>" <?php selected( (string) $value, (string) $choice_value ); ?>>
 												<?php echo esc_html( $choice_label ); ?>
@@ -228,8 +228,8 @@ class CaseLens_Meta_Box {
 			<?php
 			printf(
 				/* translators: %s: link to the Case Fields screen. */
-				esc_html__( 'These fields are defined under %s.', 'caselens-before-after-gallery' ),
-				'<a href="' . esc_url( admin_url( 'edit.php?post_type=' . CASELENS_CPT . '&page=caselens-fields' ) ) . '">' . esc_html__( 'Case Fields', 'caselens-before-after-gallery' ) . '</a>'
+				esc_html__( 'These fields are defined under %s.', 'caselens-before-and-after-gallery' ),
+				'<a href="' . esc_url( admin_url( 'edit.php?post_type=' . CASELENS_CPT . '&page=caselens-fields' ) ) . '">' . esc_html__( 'Case Fields', 'caselens-before-and-after-gallery' ) . '</a>'
 			);
 			?>
 		</p>

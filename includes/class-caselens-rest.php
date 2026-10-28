@@ -63,12 +63,12 @@ class CaseLens_REST {
 					'f'         => array(
 						'type'        => 'object',
 						'default'     => array(),
-						'description' => __( 'Choice filters, as field key => list of values.', 'caselens-before-after-gallery' ),
+						'description' => __( 'Choice filters, as field key => list of values.', 'caselens-before-and-after-gallery' ),
 					),
 					'r'         => array(
 						'type'        => 'object',
 						'default'     => array(),
-						'description' => __( 'Range filters, as field key => { min, max }.', 'caselens-before-after-gallery' ),
+						'description' => __( 'Range filters, as field key => { min, max }.', 'caselens-before-and-after-gallery' ),
 					),
 				),
 			)

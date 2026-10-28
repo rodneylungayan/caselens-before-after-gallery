@@ -187,7 +187,7 @@ class CaseLens_Templates {
 			if ( '' === $value ) {
 				continue;
 			}
-			$group = '' !== $field['group'] ? $field['group'] : __( 'Details', 'caselens-before-after-gallery' );
+			$group = '' !== $field['group'] ? $field['group'] : __( 'Details', 'caselens-before-and-after-gallery' );
 			$out[ $group ][] = array(
 				'label' => $field['label'],
 				'value' => $value,
@@ -268,21 +268,21 @@ class CaseLens_Templates {
 				'procedures' => CaseLens_Query::procedure_tree(),
 				'current'    => CaseLens_Rewrites::current_term() ? CaseLens_Rewrites::current_term()->slug : '',
 				'strings'    => array(
-					'all'        => __( 'All procedures', 'caselens-before-after-gallery' ),
-					'loading'    => __( 'Loading…', 'caselens-before-after-gallery' ),
-					'none'       => __( 'No cases match your filters.', 'caselens-before-after-gallery' ),
-					'error'      => __( 'The gallery could not be loaded. Please try again.', 'caselens-before-after-gallery' ),
-					'loadMore'   => __( 'Load more', 'caselens-before-after-gallery' ),
-					'filter'     => __( 'Filter', 'caselens-before-after-gallery' ),
-					'filterCases' => __( 'Filter cases', 'caselens-before-after-gallery' ),
-					'clearAll'   => __( 'Clear all', 'caselens-before-after-gallery' ),
-					'apply'      => __( 'Apply filters', 'caselens-before-after-gallery' ),
-					'close'      => __( 'Close', 'caselens-before-after-gallery' ),
-					'remove'     => __( 'Remove filter', 'caselens-before-after-gallery' ),
-					'min'        => __( 'Min', 'caselens-before-after-gallery' ),
-					'max'        => __( 'Max', 'caselens-before-after-gallery' ),
-					'to'         => __( 'to', 'caselens-before-after-gallery' ),
-					'notFound'   => __( 'No case found with that number.', 'caselens-before-after-gallery' ),
+					'all'        => __( 'All procedures', 'caselens-before-and-after-gallery' ),
+					'loading'    => __( 'Loading…', 'caselens-before-and-after-gallery' ),
+					'none'       => __( 'No cases match your filters.', 'caselens-before-and-after-gallery' ),
+					'error'      => __( 'The gallery could not be loaded. Please try again.', 'caselens-before-and-after-gallery' ),
+					'loadMore'   => __( 'Load more', 'caselens-before-and-after-gallery' ),
+					'filter'     => __( 'Filter', 'caselens-before-and-after-gallery' ),
+					'filterCases' => __( 'Filter cases', 'caselens-before-and-after-gallery' ),
+					'clearAll'   => __( 'Clear all', 'caselens-before-and-after-gallery' ),
+					'apply'      => __( 'Apply filters', 'caselens-before-and-after-gallery' ),
+					'close'      => __( 'Close', 'caselens-before-and-after-gallery' ),
+					'remove'     => __( 'Remove filter', 'caselens-before-and-after-gallery' ),
+					'min'        => __( 'Min', 'caselens-before-and-after-gallery' ),
+					'max'        => __( 'Max', 'caselens-before-and-after-gallery' ),
+					'to'         => __( 'to', 'caselens-before-and-after-gallery' ),
+					'notFound'   => __( 'No case found with that number.', 'caselens-before-and-after-gallery' ),
 				),
 			)
 		);

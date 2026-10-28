@@ -496,7 +496,7 @@ class CaseLens_Query {
 		$key_slots = implode( ', ', array_fill( 0, count( $meta_keys ), '%s' ) );
 		$id_slots  = implode( ', ', array_fill( 0, count( $ids ), '%d' ) );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		return (array) $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT post_id, meta_key, meta_value

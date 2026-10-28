@@ -52,7 +52,7 @@ The first page of cases is rendered by PHP, so the gallery is visible to visitor
 **From the zip**
 
 1. Plugins → Add New → Upload Plugin.
-2. Choose `caselens-before-after-gallery-1.0.0.zip`.
+2. Choose `caselens-before-and-after-gallery-1.0.0.zip`.
 3. Install, then Activate.
 
 **From source**
@@ -61,7 +61,7 @@ The first page of cases is rendered by PHP, so the gallery is visible to visitor
 git clone https://github.com/rodneylungayan/caselens-before-after-gallery.git
 ```
 
-Place the folder in `wp-content/plugins/` and activate. The folder must be named `caselens-before-after-gallery` — the text domain depends on it.
+Place the folder in `wp-content/plugins/` and activate. The folder should be named `caselens-before-and-after-gallery` (the WordPress.org slug), which matches the text domain.
 
 On activation the plugin creates a page called **Gallery** holding the `[caselens_gallery]` shortcode, and points its settings at that page.
 

@@ -44,15 +44,15 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 	<?php if ( $sidebar ) : ?>
 		<aside class="caselens-side">
 			<?php if ( ! empty( $procedures ) ) : ?>
-				<p class="caselens-kicker"><?php esc_html_e( 'Procedures', 'caselens-before-after-gallery' ); ?></p>
-				<nav class="caselens-nav" aria-label="<?php esc_attr_e( 'Procedures', 'caselens-before-after-gallery' ); ?>">
+				<p class="caselens-kicker"><?php esc_html_e( 'Procedures', 'caselens-before-and-after-gallery' ); ?></p>
+				<nav class="caselens-nav" aria-label="<?php esc_attr_e( 'Procedures', 'caselens-before-and-after-gallery' ); ?>">
 					<ul class="caselens-nav-all">
 						<li>
 							<a class="caselens-term<?php echo '' === $caselens_slug ? ' is-current' : ''; ?>"
 								href="<?php echo esc_url( CaseLens_Settings::gallery_url() ); ?>"
 								data-slug=""
 								<?php echo '' === $caselens_slug ? ' aria-current="page"' : ''; ?>>
-								<?php esc_html_e( 'All procedures', 'caselens-before-after-gallery' ); ?>
+								<?php esc_html_e( 'All procedures', 'caselens-before-and-after-gallery' ); ?>
 							</a>
 						</li>
 					</ul>
@@ -68,8 +68,8 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 					<label for="caselens-number-input"><?php echo esc_html( $settings['number_label'] ); ?></label>
 					<div class="caselens-number-row">
 						<input id="caselens-number-input" type="text" inputmode="numeric" autocomplete="off"
-							placeholder="<?php esc_attr_e( 'e.g. 234', 'caselens-before-after-gallery' ); ?>" />
-						<button type="submit"><?php esc_html_e( 'Go', 'caselens-before-after-gallery' ); ?></button>
+							placeholder="<?php esc_attr_e( 'e.g. 234', 'caselens-before-and-after-gallery' ); ?>" />
+						<button type="submit"><?php esc_html_e( 'Go', 'caselens-before-and-after-gallery' ); ?></button>
 					</div>
 				</form>
 			<?php endif; ?>
@@ -81,7 +81,7 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 			<div class="caselens-filterbar">
 				<button type="button" class="caselens-filter-btn" aria-haspopup="dialog" aria-expanded="false" hidden>
 					<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>
-					<span><?php esc_html_e( 'Filter', 'caselens-before-after-gallery' ); ?></span>
+					<span><?php esc_html_e( 'Filter', 'caselens-before-and-after-gallery' ); ?></span>
 					<b class="caselens-filter-count" hidden></b>
 				</button>
 				<div class="caselens-chips" aria-live="polite"></div>
@@ -102,7 +102,7 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 
 		<div class="caselens-grid" style="--caselens-columns:<?php echo esc_attr( $columns ); ?>">
 			<?php if ( empty( $caselens_first['cases'] ) ) : ?>
-				<p class="caselens-empty"><?php esc_html_e( 'No cases have been published yet.', 'caselens-before-after-gallery' ); ?></p>
+				<p class="caselens-empty"><?php esc_html_e( 'No cases have been published yet.', 'caselens-before-and-after-gallery' ); ?></p>
 			<?php endif; ?>
 
 			<?php foreach ( $caselens_first['cases'] as $caselens_index => $caselens_card ) : ?>
@@ -122,7 +122,7 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 
 		<p class="caselens-center">
 			<button type="button" class="caselens-more" <?php echo $caselens_first['pages'] > 1 ? '' : 'hidden'; ?>>
-				<?php esc_html_e( 'Load more', 'caselens-before-after-gallery' ); ?>
+				<?php esc_html_e( 'Load more', 'caselens-before-and-after-gallery' ); ?>
 			</button>
 		</p>
 	</section>
@@ -131,13 +131,13 @@ $caselens_intro   = $term ? wp_strip_all_tags( (string) $term->description ) : '
 		<div class="caselens-modal" role="dialog" aria-modal="true" aria-labelledby="caselens-modal-title" hidden>
 			<div class="caselens-modal-box">
 				<div class="caselens-modal-head">
-					<h3 id="caselens-modal-title"><?php esc_html_e( 'Filter cases', 'caselens-before-after-gallery' ); ?></h3>
-					<button type="button" class="caselens-x" aria-label="<?php esc_attr_e( 'Close', 'caselens-before-after-gallery' ); ?>">&times;</button>
+					<h3 id="caselens-modal-title"><?php esc_html_e( 'Filter cases', 'caselens-before-and-after-gallery' ); ?></h3>
+					<button type="button" class="caselens-x" aria-label="<?php esc_attr_e( 'Close', 'caselens-before-and-after-gallery' ); ?>">&times;</button>
 				</div>
 				<form class="caselens-modal-body"></form>
 				<div class="caselens-modal-foot">
-					<button type="button" class="caselens-ghost caselens-clear"><?php esc_html_e( 'Clear all', 'caselens-before-after-gallery' ); ?></button>
-					<button type="button" class="caselens-apply"><?php esc_html_e( 'Apply filters', 'caselens-before-after-gallery' ); ?></button>
+					<button type="button" class="caselens-ghost caselens-clear"><?php esc_html_e( 'Clear all', 'caselens-before-and-after-gallery' ); ?></button>
+					<button type="button" class="caselens-apply"><?php esc_html_e( 'Apply filters', 'caselens-before-and-after-gallery' ); ?></button>
 				</div>
 			</div>
 		</div>

@@ -288,7 +288,7 @@ class CaseLens_Case {
 			$heading = trim( $heading . ' #' . $number );
 		}
 
-		return '' !== $heading ? $heading : __( 'Case', 'caselens-before-after-gallery' );
+		return '' !== $heading ? $heading : __( 'Case', 'caselens-before-and-after-gallery' );
 	}
 
 	/**

@@ -33,10 +33,10 @@ class CaseLens_Fields {
 	 */
 	public static function types() {
 		return array(
-			'text'        => __( 'Text', 'caselens-before-after-gallery' ),
-			'number'      => __( 'Number (filtered as a range)', 'caselens-before-after-gallery' ),
-			'select'      => __( 'Choice (one)', 'caselens-before-after-gallery' ),
-			'multiselect' => __( 'Choice (several)', 'caselens-before-after-gallery' ),
+			'text'        => __( 'Text', 'caselens-before-and-after-gallery' ),
+			'number'      => __( 'Number (filtered as a range)', 'caselens-before-and-after-gallery' ),
+			'select'      => __( 'Choice (one)', 'caselens-before-and-after-gallery' ),
+			'multiselect' => __( 'Choice (several)', 'caselens-before-and-after-gallery' ),
 		);
 	}
 
@@ -49,8 +49,8 @@ class CaseLens_Fields {
 		return array(
 			array(
 				'key'     => 'case_number',
-				'label'   => __( 'Case number', 'caselens-before-after-gallery' ),
-				'group'   => __( 'Overview', 'caselens-before-after-gallery' ),
+				'label'   => __( 'Case number', 'caselens-before-and-after-gallery' ),
+				'group'   => __( 'Overview', 'caselens-before-and-after-gallery' ),
 				'type'    => 'text',
 				'choices' => array(),
 				'suffix'  => '',
@@ -59,8 +59,8 @@ class CaseLens_Fields {
 			),
 			array(
 				'key'     => 'age',
-				'label'   => __( 'Age', 'caselens-before-after-gallery' ),
-				'group'   => __( 'Overview', 'caselens-before-after-gallery' ),
+				'label'   => __( 'Age', 'caselens-before-and-after-gallery' ),
+				'group'   => __( 'Overview', 'caselens-before-and-after-gallery' ),
 				'type'    => 'number',
 				'choices' => array(),
 				'suffix'  => '',
@@ -69,13 +69,13 @@ class CaseLens_Fields {
 			),
 			array(
 				'key'     => 'gender',
-				'label'   => __( 'Gender', 'caselens-before-after-gallery' ),
-				'group'   => __( 'Overview', 'caselens-before-after-gallery' ),
+				'label'   => __( 'Gender', 'caselens-before-and-after-gallery' ),
+				'group'   => __( 'Overview', 'caselens-before-and-after-gallery' ),
 				'type'    => 'select',
 				'choices' => array(
-					'female' => __( 'Female', 'caselens-before-after-gallery' ),
-					'male'   => __( 'Male', 'caselens-before-after-gallery' ),
-					'other'  => __( 'Other', 'caselens-before-after-gallery' ),
+					'female' => __( 'Female', 'caselens-before-and-after-gallery' ),
+					'male'   => __( 'Male', 'caselens-before-and-after-gallery' ),
+					'other'  => __( 'Other', 'caselens-before-and-after-gallery' ),
 				),
 				'suffix'  => '',
 				'filter'  => 1,
@@ -83,8 +83,8 @@ class CaseLens_Fields {
 			),
 			array(
 				'key'     => 'height',
-				'label'   => __( 'Height', 'caselens-before-after-gallery' ),
-				'group'   => __( 'Overview', 'caselens-before-after-gallery' ),
+				'label'   => __( 'Height', 'caselens-before-and-after-gallery' ),
+				'group'   => __( 'Overview', 'caselens-before-and-after-gallery' ),
 				'type'    => 'text',
 				'choices' => array(),
 				'suffix'  => '',
@@ -93,11 +93,11 @@ class CaseLens_Fields {
 			),
 			array(
 				'key'     => 'weight',
-				'label'   => __( 'Weight', 'caselens-before-after-gallery' ),
-				'group'   => __( 'Overview', 'caselens-before-after-gallery' ),
+				'label'   => __( 'Weight', 'caselens-before-and-after-gallery' ),
+				'group'   => __( 'Overview', 'caselens-before-and-after-gallery' ),
 				'type'    => 'number',
 				'choices' => array(),
-				'suffix'  => __( 'lbs', 'caselens-before-after-gallery' ),
+				'suffix'  => __( 'lbs', 'caselens-before-and-after-gallery' ),
 				'filter'  => 1,
 				'show'    => 1,
 			),
@@ -177,7 +177,7 @@ class CaseLens_Fields {
 		$fields = null === $fields ? self::all() : $fields;
 		$out    = array();
 		foreach ( $fields as $field ) {
-			$group = '' !== $field['group'] ? $field['group'] : __( 'Details', 'caselens-before-after-gallery' );
+			$group = '' !== $field['group'] ? $field['group'] : __( 'Details', 'caselens-before-and-after-gallery' );
 			$out[ $group ][] = $field;
 		}
 		return $out;
