@@ -4,6 +4,7 @@
 /.distignore    export-ignore
 /.github        export-ignore
 /test-fixtures  export-ignore
+/README.md      export-ignore
 
 # Normalise line endings in the repository.
 * text=auto
