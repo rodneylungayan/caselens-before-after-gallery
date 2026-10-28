@@ -1,0 +1,14 @@
+# Files kept out of the plugin zip that goes to WordPress.org.
+.git
+.github
+.gitignore
+.distignore
+.editorconfig
+node_modules
+vendor
+test-fixtures
+tests
+*.zip
+*.log
+.DS_Store
+Thumbs.db

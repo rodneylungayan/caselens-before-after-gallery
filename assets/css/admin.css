@@ -1,0 +1,168 @@
+/**
+ * CaseLens Before and After Gallery — admin styles.
+ */
+
+/* --------------------------------------------------- Before/after rows */
+
+.caselens-pairs {
+	margin: 0 0 12px;
+}
+
+.caselens-pair {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 16px;
+	padding: 12px;
+	margin: 0 0 10px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.caselens-pair-handle {
+	color: #8c8f94;
+	cursor: move;
+	margin-top: 18px;
+}
+
+.caselens-slot {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 130px;
+}
+
+.caselens-slot-label {
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #50575e;
+}
+
+.caselens-pick {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 130px;
+	height: 130px;
+	padding: 0;
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 3px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.caselens-pick:hover,
+.caselens-pick:focus-visible {
+	border-color: #2271b1;
+}
+
+.caselens-pick.has-image {
+	border-style: solid;
+	background: #fff;
+}
+
+.caselens-pick img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.caselens-pick-text {
+	font-size: 12px;
+	color: #50575e;
+	padding: 0 8px;
+	text-align: center;
+}
+
+.caselens-clear[hidden] {
+	display: none;
+}
+
+.caselens-pair-meta {
+	flex: 1;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 18px;
+}
+
+/* --------------------------------------------------------- Case details */
+
+.caselens-details .caselens-group,
+.caselens-wrap .caselens-group {
+	margin: 18px 0 0;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #dcdcde;
+	font-size: 11px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.caselens-check {
+	display: block;
+	margin: 0 0 6px;
+}
+
+.caselens-field-toggles .caselens-check {
+	display: inline-block;
+	margin-right: 12px;
+}
+
+/* ---------------------------------------------------- Case field editor */
+
+.caselens-field-row {
+	padding: 12px 16px;
+	margin: 0 0 10px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.caselens-field-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	gap: 0 16px;
+	align-items: end;
+}
+
+.caselens-field-cell {
+	margin: 0 0 8px;
+}
+
+.caselens-field-cell input,
+.caselens-field-cell select {
+	width: 100%;
+	max-width: 100%;
+}
+
+.caselens-field-choices[hidden] {
+	display: none;
+}
+
+/* ------------------------------------------------------- List columns */
+
+.caselens-col-photos {
+	display: inline-flex;
+	gap: 3px;
+}
+
+.caselens-col-photos img {
+	width: 38px;
+	height: 38px;
+	object-fit: cover;
+	border-radius: 2px;
+}
+
+.column-caselens_photo {
+	width: 90px;
+}
+
+.column-caselens_number {
+	width: 80px;
+}
